@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        var x = "global";
+
+        if (x === "global") {
+            let x = "block-scoped";
+
+            console.log("Inside=>",x);
+            console.log("accessing globalval=>",window.x);
+            // expected output: block-scoped
+        }
+
+        console.log("Outside=>",x);
+// ------------------------------------------------------
+        // var y = "global";
+
+        // if (y === "global") {
+        //     var y = "block-scoped";
+
+        //     console.log("Inside=>",y);
+        //     // expected output: block-scoped
+        // }
+
+        // console.log("Outside=>",y);
+    </script>
+</body>
+
+</html>

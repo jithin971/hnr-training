@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+    <!-- ES6 implemented the useful feature of template strings, now called template literals. 
+    This allows you to easily implement variables with a very simple syntax (${ }) and embed expressions. -->
+
+    <script type="text/javascript">
+        var [a, b, c] = [1, 2, 3];
+        console.log(a);
+        // 1
+        console.log(b);
+        // 2
+        console.log(c);
+
+        // you can skip over items in the array 
+        var [, , third] = ["foo", "bar", "baz"];
+        console.log(third);
+
+        // And you can capture all trailing items in an array with a “rest” pattern:
+        var [head, ...tail] = [1, 2, 3, 4];
+        console.log(tail);
+// [2, 3, 4]
+    </script>
+</body>
+
+</html>

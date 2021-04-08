@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        var a = [1, 2, 3, [4, 5, [6]]]
+        let temp = []
+        join(a)
+        function join(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                    join(arr[i])
+                }
+                else {
+                    temp.push(arr[i])
+                }
+            }
+            console.log(temp)
+        }
+    </script>
+    
+</body>
+
+</html>

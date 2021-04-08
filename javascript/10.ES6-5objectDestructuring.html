@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+    <!-- ES6 implemented the useful feature of template strings, now called template literals. 
+    This allows you to easily implement variables with a very simple syntax (${ }) and embed expressions. -->
+
+    <script type="text/javascript">
+        var employee = {    // Object we want to destructure
+            firstname: 'John',
+            lastname: 'sam',
+            dateofbirth: '2010'
+        };
+
+        // Destructuring the object into our variables
+        var { firstname, lastname, dateofbirth } = employee;
+        console.log(firstname, lastname, dateofbirth);
+
+        // Destructuring the object into variables with
+        // different names than the object variables
+
+        var { firstname: fn, lastname: ln, dateofbirth: dob } = employee;
+        console.log(fn, ln, dob)
+
+        // Destructuring the object into variables by 
+        // assigning default values 
+        var { firstname = 'default firstname',
+            lastname = 'default lastname',
+            country = 'default country' } = employee;
+        console.log("\n After setting default values")
+        console.log(firstname, lastname, country);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        div {
+            max-width: 300px; 
+            display: flex;
+             flex-wrap: wrap; 
+        }
+
+        #masterDiv>div {
+            border: 1px solid red;
+            width: 30px;
+            height: 30px;
+        }
+
+        #masterDiv>div:hover {
+            background-color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <input id="limit" value="10">
+    <button onclick="myFunction()">Generate</button><br><br>
+    <div id="masterDiv"></div>
+
+
+    </div>
+    <script>
+        //  myFunction(10)
+        function myFunction() {
+            var limit = document.getElementById("limit").value
+            var mDiv = document.getElementById("masterDiv")
+            for (var i = 0; i < limit ; i++) {
+                var btn = document.createElement("DIV");
+                mDiv.appendChild(btn);
+            }
+            // document.body.appendChild(mDiv);
+        }
+    </script>
+
+</body>
+
+</html>
