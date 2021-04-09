@@ -1,0 +1,29 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/typescript" src="script.ts"></script>
+    <script type="text/typescript">
+      var disp_details=(id:number,name:string,mail_id?:string)=> { 
+        console.log("ID:", id); 
+        console.log("Name",name); 
+        
+        if(mail_id!=undefined)  
+        console.log("Email Id",mail_id); 
+     }
+     disp_details(123,"John");
+     disp_details(111,"mary","mary@xyz.com");
+    </script>
+    
+    
+    <script src="https://rawgit.com/Microsoft/TypeScript/master/lib/typescriptServices.js"></script>
+    <script src="https://rawgit.com/basarat/typescript-script/master/transpiler.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome to TypeScript!</h1>
+  </body>
+  
+  
+
+</html>
