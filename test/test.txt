@@ -1,0 +1,4 @@
+1.book display is not working
+2.in purchase should render buy and rent as child
+3.in buy component title should red
+3.in buy component title should green

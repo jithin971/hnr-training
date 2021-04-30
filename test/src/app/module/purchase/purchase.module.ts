@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { PurchaseRoutingModule } from './purchase-routing.module';
 import { PurchaseComponent } from './purchase.component';
+import { BuyComponent } from './components/buy/buy.component';
+import { RentComponent } from './components/rent/rent.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    PurchaseComponent
+    PurchaseComponent,
+    BuyComponent,
+    RentComponent
   ],
   imports: [
     CommonModule,
-    PurchaseRoutingModule
+    PurchaseRoutingModule,
+    SharedModule
   ]
 })
 export class PurchaseModule { }

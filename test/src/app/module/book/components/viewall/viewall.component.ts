@@ -11,7 +11,7 @@ export class ViewallComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
   ngOnInit(): void {
-    this.bookService.books
+    this.books= this.bookService.books
   }
 
 }

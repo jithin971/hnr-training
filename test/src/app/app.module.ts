@@ -7,17 +7,20 @@ import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { TitleDirective } from './directives/title.directive';
 import { DiscountPipe } from './pipes/discount.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LimitLengthPipe } from './pipes/limit-length.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TitleDirective,
-    DiscountPipe
+    DiscountPipe,
+    LimitLengthPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
