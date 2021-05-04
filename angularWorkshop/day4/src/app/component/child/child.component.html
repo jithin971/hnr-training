@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let emp of employee">
+        {{emp.name}} <button (click)="removeData(emp)">Remove</button>
+    </li>
+</ul>

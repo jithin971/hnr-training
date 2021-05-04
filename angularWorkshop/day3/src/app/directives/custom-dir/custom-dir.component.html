@@ -1,0 +1,16 @@
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<div class="demo-block" [appStrdir]="'10px'" color="{{color}}" defaultColor="violet"></div>
+
+<p [appStrdir]="'20px'" color="{{color}}" defaultColor="pink">hi</p>
+
+<!-- The asterisk, *, syntax on a structural directive, such as *ngIf, is shorthand that Angular interprets into a longer form. -->
+<!-- Angular transforms the asterisk in front of a structural directive into an <ng-template>  -->
+<div *appStructuralDir="1000" (click)="{}">
+  <h1 >This is the Template area</h1>
+</div>

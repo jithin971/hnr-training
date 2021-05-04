@@ -1,0 +1,85 @@
+<!-- template reference variable, #purchaseForm. -->
+<!-- The ngForm directive is what makes the Angular template-driven forms work. -->
+
+
+<!-- ngModel is an instance of the FormControl which has quite a number of controls which include dirty, invalid,
+ errors, pristine, touched, untouched, value etc. The FormControl class is use to track the state changes of our input. -->
+
+<Form ngForm #purchaseForm="ngForm" (ngSubmit)="onSubmit(purchaseForm)">
+    <div class="formGroup">
+        <label>Id</label>
+        <input type="text" name="itemID" ngModel required><br>
+        <div *ngIf="!purchaseForm.form.controls.itemID?.valid && purchaseForm.form.controls.itemID?.touched">
+            User name is required!
+        </div>
+    </div>
+
+
+    <div class="formGroup">
+        <label>Name</label>
+        <input [ngClass]="{
+            'has-danger': itm.invalid && (itm.dirty || itm.touched),
+            'has-success': itm.valid && (itm.dirty || itm.touched)
+       }" type="text" name="itemName" ngModel #itm="ngModel" required><br>
+        <div>
+            {{itm.invalid}}{{itm.dirty}}{{itm.touched}}
+        </div>
+    </div>
+
+    <div class="formGroup">
+        <label>Price</label>
+        <input type="text" [appValidateInput]="itmPrice" maxlength="5" minlength="2" name="price" #itmPrice="ngModel"
+            ngModel required><br>
+        <div *ngIf="itmPrice.errors?.minlength">
+            Minmum 2 digits
+        </div>
+    </div>
+
+    <div class="formGroup">
+        <label>Quantity</label>
+        <input type="text" [appValidateInput]="itmPrice" name="quantity" #itmQuantity="ngModel" ngModel><br>
+    </div>
+
+    <div class="formGroup">
+        <label for="offer">offer</label>
+        <input type="radio" value="yes" name="offer" ngModel> Yes
+        <input type="radio" value="no" name="offer" ngModel> No
+    </div>
+
+    <div class="formGroup">
+        <label>company</label>
+        <select ngModel name="company" required>
+            <option value="1">ABC</option>
+            <option value="2">XYZ</option>
+            <option value="3">PQR</option>
+        </select>
+    </div>
+    <button type="submit" [disabled]="!purchaseForm.form.valid">
+        Register
+    </button>
+</Form>
+
+<!-- The Template-driven forms 
+
+The form is set up using ngForm directive
+controls are set up using the ngModel directive
+ngModel also provides the two-way data binding
+The Validations are configured in the template via directives
+Template-driven forms are
+
+Contains little code in the component class 
+Easier to set up 
+While they are
+
+Difficult to add controls dynamically
+Unit testing is a challenge -->
+
+<!-- The ngForm does the following
+
+Binds itself to the <Form> directive
+Creates a top-level FormGroup instance
+CreatesFormControl instance for each of child control, which has ngModel directive.
+CreatesFormGroup instance for each of the  NgModelGroup directive.
+We can export the ngForm instance into a local template variable using ngForm as the
+ key (ex: #contactForm="ngForm"). This allows us to access the many properties and methods 
+ of ngForm using the template variable -->

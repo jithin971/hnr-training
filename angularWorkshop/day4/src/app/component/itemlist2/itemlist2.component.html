@@ -1,0 +1,10 @@
+<p>itemlist2 works!</p>
+
+<div class="main-div">
+<div class="sub" *ngFor="let emp of employee">
+    <div>id:{{emp.id}}</div>
+   <div>Name:{{emp.name}}</div>
+   <div>Age:{{emp.age}}</div>
+   <div><button (click)="navigate(emp.id)">Details</button></div>
+</div>
+</div>

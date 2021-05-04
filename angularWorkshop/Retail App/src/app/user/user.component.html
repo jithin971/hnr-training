@@ -1,0 +1,41 @@
+<form [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" [appValidateInput]="myform.controls.name" class="form-control" formControlName="name" >
+
+        <pre>Dirty? {{ myform.controls.name.dirty }}</pre>
+        <pre>Pristine? {{ myform.controls.name.pristine }}</pre>
+        <pre>Touched? {{ myform.controls.name.touched }}</pre>
+        <pre>Valid? {{ myform.controls.name.valid }}</pre>
+        <pre>Invalid? {{ myform.controls.name.invalid }}</pre>
+        <pre>Invalid? {{ myform.controls.name.errors|json }}</pre>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" formControlName="email" >
+
+
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" [appValidateInput]="password" formControlName="password" >
+        <p *ngIf="password.errors?.required">Password is required</p>
+    </div>
+    <div class="form-group">
+        <label>Language</label>
+        <select class="form-control" formControlName="language">
+            <option value="">Please select a language</option>
+            <option *ngFor="let lang of langs" [value]="lang">{{lang}}
+            </option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+
+<!-- Use formGroup to bind the form to an instance of FormGroup on our component.
+Use formGroupName to map to a child FormGroup of myform.
+Use formControlName to bind to an instance of a FormControl,
+     since these form controls are under a formGroupName of name,
+     Angular will try and find the control in under myform['name'].
+Use formControlName to bind to an instance of a FormControl directly under myform. -->

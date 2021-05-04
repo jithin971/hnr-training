@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>author</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let user of allUser|async">
+        <td>{{user.id}}</td>
+        <td>{{user.title}}</td>
+        <td>{{user.author}}</td>
+        <td><button (click)="updateData(user)">Update</button></td>
+        <td><button (click)="deleteData(user.id)">Delete</button></td>
+    </tr>
+</table>

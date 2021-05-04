@@ -1,0 +1,14 @@
+<p>ngclass-style works!</p>
+<ul>
+    <li *ngFor="let person of people"
+     [ngClass]="{'uk':person.country==='UK','india':person.country==='INDIA','usa':person.country==='USA'}">
+        {{person.name}} --{{person.country}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people" [ngStyle]="{'font-size':'30px'}" 
+    [style.color]="getColor(person.country)">
+        {{person.name}} --{{person.country}}
+    </li>
+</ul>

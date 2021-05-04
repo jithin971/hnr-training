@@ -1,0 +1,19 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>author</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let user of itemObser|async">
+        <td>{{user.id}}</td>
+        <td>{{user.title}}</td>
+        <td>{{user.author}}</td>
+        <td><button (click)="updateData(user)">Update</button></td>
+        <td><button (click)="deleteData(user.id)">Delete</button></td>
+    </tr>
+</table>
+    
+<!-- Async Pipe is an impure pipe that automatically subscribes to an observable to emit the latest values.
+ It not only subscribes to an observable, but it also subscribes to a promise and calls the then method. 
+ When the components get destroyed, it automatically unsubscribes them to reduce memory leaks. -->

@@ -1,0 +1,6 @@
+Name:<input type="text" [(ngModel)]="name">
+Age:<input type="text" [(ngModel)]="age">
+<button (click)="saveData()">Save</button>
+<br>
+
+<app-child [employee]="employee" (removeEmp)="abc($event)"></app-child>

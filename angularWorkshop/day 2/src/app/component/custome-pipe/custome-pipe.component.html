@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>salary</th>
+        <th>Tax</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.name|uppercase}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.salary|currency:'INR'}}</td>
+        <td>{{emp.salary|tsx:5000|uppercase}}</td>
+    </tr>
+</table>

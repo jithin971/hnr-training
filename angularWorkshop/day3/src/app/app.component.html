@@ -1,0 +1,21 @@
+<div class="content">
+  <span>day3 app is running!</span>
+</div>
+
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem routerLink="">
+    <a ngbNavLink>First</a>
+    <ng-template ngbNavContent >First content</ng-template>
+  </li>
+  <li ngbNavItem [routerLink]="['home',2]">
+    <a ngbNavLink>Second</a>
+    <ng-template ngbNavContent >Second content</ng-template>
+  </li>
+  <li ngbNavItem  routerLink="custome">
+    <a ngbNavLink>Second</a>
+    <ng-template ngbNavContent >custome content</ng-template>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<!-- <app-custom-dir></app-custom-dir>
+<app-ngifelse></app-ngifelse> -->

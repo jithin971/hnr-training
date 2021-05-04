@@ -1,0 +1,16 @@
+<input type="text" [(ngModel)]="name">
+
+<ul [ngSwitch]="name">
+    <li *ngSwitchCase="'raju'">
+        my name is raju
+    </li>
+    <li *ngSwitchCase="'sam'">
+        my name is sam
+    </li>
+    <li *ngSwitchCase="'xyz'">
+        my name is xyz
+    </li>
+    <li *ngSwitchDefault>
+        Your name not in the list
+    </li>
+</ul>

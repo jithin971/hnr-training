@@ -1,0 +1,19 @@
+<p>lifecycle works!</p>
+name:<input type="text" [(ngModel)]="name">
+<button (click)="inc()">+</button>
+
+<!-- @view examble -->
+<button (click)="getChild()">Acccess child element</button>
+
+
+<app-lifecycle-helper [name]="name" [counter]="counter">
+    <!-- <div asd>
+        div 1
+    </div>
+    <div psd>
+        div 2
+    </div> -->
+    <!-- <h1 *ngIf="flag">asd</h1>
+    <span>sad</span> -->
+    <div #myContent>foo</div>
+</app-lifecycle-helper>

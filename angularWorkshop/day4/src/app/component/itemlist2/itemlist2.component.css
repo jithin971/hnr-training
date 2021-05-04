@@ -1,0 +1,10 @@
+.main-div{
+    display: flex;
+}
+.sub{
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    margin: 10px;
+    padding: 10px;
+}

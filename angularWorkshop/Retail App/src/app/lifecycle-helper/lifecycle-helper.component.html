@@ -1,0 +1,12 @@
+<p>lifecycle-helper works!</p>
+{{toDisplay}}
+
+<button (click)="clickMe()">clickMe</button>
+
+<!-- <ng-content select="[asd]"></ng-content> 
+<ng-content select="[psd]"></ng-content>  -->
+<div #wrapper>
+    <ng-content select="h1"></ng-content>
+    <ng-content select="span"></ng-content>
+    <ng-content></ng-content>
+</div>

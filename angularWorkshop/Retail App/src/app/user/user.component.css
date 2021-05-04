@@ -1,0 +1,8 @@
+
+.has-danger{
+    border: 2px solid red;
+}
+
+.has-success{
+    border: 2px solid rgb(63, 104, 190);
+}

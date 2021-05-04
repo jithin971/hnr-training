@@ -1,0 +1,11 @@
+<p>lifecycle Parent component!</p><br>
+<button (click)="incrementCounter()">INC</button>
+
+<br>
+------------------------------------<br>
+<!--  {{counterFromService}} -->
+
+{{posts|json}} 
+
+<br><button (click)="saveData()">SaveData</button>
+<app-lifecyclechild [counter]="counter"></app-lifecyclechild>
